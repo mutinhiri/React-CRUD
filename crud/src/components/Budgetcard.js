@@ -1,0 +1,18 @@
+import React from 'react'
+import { Card } from 'react-bootstrap'
+import { currencyFormatter } from '../utils'
+
+export default function Budgetcard({name, amount, max}) {
+  return (
+    <div>
+      <Card>
+        <Card.Body>
+          <Card.Title>
+            <div>{name}</div>
+            <div>{currencyFormatter.format (amount)} / { max}</div>
+          </Card.Title>
+        </Card.Body>
+      </Card>
+    </div>
+  )
+}

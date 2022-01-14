@@ -4,12 +4,15 @@ import { Button, Stack } from 'react-bootstrap'
 function App() {
   return (
     <div className="App">
-     <Container>
+     <Container className='my-4'>
         <Stack direction='horizontal' gap="2" className="mb-4" >
           <h1 className='me-auto'>Budgets</h1>
           <Button variant='primary'>Add budget</Button>
           <Button variant='outline-primary'>Add expense</Button>
         </Stack>
+        <div className='stacks'>
+
+        </div>
       </Container>
      
     </div>

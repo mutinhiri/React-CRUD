@@ -9,7 +9,7 @@ export default function Budgetcard({name, amount, max}) {
         <Card.Body>
           <Card.Title>
             <div>{name}</div>
-            <div>{currencyFormatter.format (amount)} / { max}</div>
+            <div>{currencyFormatter.format (amount)} / {currencyFormatter.format (max)}</div>
           </Card.Title>
         </Card.Body>
       </Card>

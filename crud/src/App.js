@@ -16,7 +16,7 @@ function App() {
           <Budgetcard gray name="Entertainment" amount={300} max={200} />
         </div>
       </Container>
-      <AddBudgetModal show />
+      <AddBudgetModal show={showAddBudgetModal} handleClose={() => setShowAddBudgetModal(false)} />
      
     </div>
   );

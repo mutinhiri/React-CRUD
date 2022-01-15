@@ -1,7 +1,12 @@
 import React from 'react'
+import { useRef } from 'react'
 import { Button, Form, Modal } from 'react-bootstrap'
 
-export default function AddBudgetModal({show, handleClose}) {
+export default function AddBudgetModal({ show, handleClose }) {
+  const nameRef = useRef()
+  const maxRef = useRef()
+  
+  function hanldeSubmit(e){}
   return (
     <Modal show={show} onHide={handleClose}>
       <Form onSubmit ={hanldeSubmit}>

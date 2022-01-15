@@ -12,7 +12,7 @@ function App() {
           <Button variant='outline-primary'>Add expense</Button>
         </Stack>
         <div className='stacks'>
-          <Budgetcard gray name="Entertainment" amount={300} max={800} />
+          <Budgetcard gray name="Entertainment" amount={300} max={200} />
         </div>
       </Container>
      

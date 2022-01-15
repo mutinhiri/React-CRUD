@@ -32,6 +32,9 @@ export const BudgetsProvider = ({ children }) => {
   }
 
   function addExpenses() {
+      setExpenses(prevExpense => {
+        return [...prevExpense, {id: uuidV4(), name, max }]
+    })
     
   }
   function addBudget({name,max}) {

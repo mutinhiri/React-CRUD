@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react"
+import { v4 as uuidV4 } from 'uuid'
 
 const BudgetsContext = React.createContext
 
@@ -23,16 +24,20 @@ export function useBudgets() {
 export const BudgetsProvider = ({ children }) => {
   const [budgets, setBudget] = useState([])
   const [expenses, setExpenses] = useState([])
+  
 
   function getBudgetExpenses(budgetId) {
+    return expenses.filter(expense => expense.budgetId == budgetId)
     
   }
 
   function addExpenses() {
     
   }
-  function addBudget() {
-
+  function addBudget({name,max}) {
+    setBudget(prevBudget => {
+      return [...prevBudget, {id: uuidV4(), name, max }]
+    })
   }
 
   function deleteBudget() {

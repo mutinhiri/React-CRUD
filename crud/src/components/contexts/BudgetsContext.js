@@ -31,9 +31,9 @@ export const BudgetsProvider = ({ children }) => {
     
   }
 
-  function addExpenses() {
+  function addExpenses({description, amount, budgetId}) {
       setExpenses(prevExpense => {
-        return [...prevExpense, {id: uuidV4(), name, max }]
+        return [...prevExpense, {id: uuidV4(), description, amount, budgetId }]
     })
     
   }
@@ -46,7 +46,10 @@ export const BudgetsProvider = ({ children }) => {
     })
   }
 
-  function deleteBudget() {
+  function deleteBudget({ id }) {
+    setBudget(prevBudget => {
+      return prevBudget.filter(budget => budget.id !== id)
+    })
     
   }
 

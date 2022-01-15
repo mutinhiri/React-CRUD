@@ -62,11 +62,13 @@ export const BudgetsProvider = ({ children }) => {
 
   return (
     <BudgetsContext.Provider value={{
-      // getBudgetExpenses,
-      // addExpenses,
-      // addBudget,
-      // deleteBudget,
-      // deleteExpense
+      budgets,
+      expenses,
+      getBudgetExpenses,
+      addExpenses,
+      addBudget,
+      deleteBudget,
+      deleteExpense
     }}>{children}</BudgetsContext.Provider>
   )
 }

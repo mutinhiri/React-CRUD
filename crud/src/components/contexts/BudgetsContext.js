@@ -47,6 +47,7 @@ export const BudgetsProvider = ({ children }) => {
   }
 
   function deleteBudget({ id }) {
+    //deal with uncategorized 
     setBudget(prevBudget => {
       return prevBudget.filter(budget => budget.id !== id)
     })

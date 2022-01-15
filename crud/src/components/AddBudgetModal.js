@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Modal } from 'react-bootstrap'
+import { Button, Form, Modal } from 'react-bootstrap'
 
 export default function AddBudgetModal({show, handleClose}) {
   return (
@@ -11,9 +11,17 @@ export default function AddBudgetModal({show, handleClose}) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form.Group>
+          <Form.Group controlId='name' className='mb-3'>
             <Form.Label>Name</Form.Label>
+            <Form.Control type='text' required></Form.Control>
           </Form.Group>
+          <Form.Group controlId='max' className='mb-3'>
+            <Form.Label>Maximum Spending</Form.Label>
+            <Form.Control type='number' required min={0} step={0.01} ></Form.Control>
+          </Form.Group>
+          <div className="d-flex justify-content-end">
+            <Button variant='primary' type='submit'>Add</Button>
+          </div>
         </Modal.Body>
       </Form>
     </Modal>
